@@ -1,0 +1,7 @@
+{
+  "go.lintTool": "staticcheck",
+  "go.lintOnSave": "off",
+  "go.vetOnSave": "off",
+  "go.formatTool": "gofmt",
+  "go.testFlags": ["-short"]
+}
