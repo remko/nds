@@ -11,7 +11,7 @@ Offers many features of the
 
 Client implementations:
 
-- **Datastore**: Passthrough to the
+- [**Datastore**](https://pkg.go.dev/github.com/remko/nds/datastore): Passthrough to the
   [`cloud.google.com/datastore`](https://pkg.go.dev/cloud.google.com/go/datastore)
   package, for the actual connection to Google Cloud Datastore.
 - **Memory**: in-memory implementation, for use in unit tests
@@ -26,3 +26,20 @@ This package also provides utility functions for working with the datastore:
 - Functions to safely load and save incomplete structs from datastore. This
   avoids data loss when working with structs that do not perfectly map to the
   datastore (e.g. when working with legacy data or other clients)
+
+## Documentation
+
+- [Package documentation](https://pkg.go.dev/github.com/remko/nds)
+
+## Related packages
+
+- <https://pkg.go.dev/github.com/qedus/nds>
+
+    - Cached datastore API implementation
+    - Follows the same API as the standard datastore package
+    - Only adds a cache layer (no abstraction, no memory implementation)
+    - Inspired by NDB
+
+- <https://github.com/mercari/datastore>
+
+    - Does much more than just wrapping: different API, different implementation, ...
